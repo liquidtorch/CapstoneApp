@@ -7,15 +7,40 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+
+
 
 class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = "Home View"
+
+
+
+		var current = Auth.auth().currentUser
+		var uid = current?.uid
+//		print(current?.uid)
+
+		let ref = Database.database().reference()
+
+		let packerTripRef = ref.child("packer").child(uid!).child("trips")
+		packerTripRef.observe(DataEventType.value, with: { (snapshot) in
+			let tripInfo = snapshot.value as? [String : AnyObject] ?? [:]
+			print(tripInfo)
+		})
 
         // Do any additional setup after loading the view.
+
+
     }
     
+	@IBAction func handleLogout(_ target: UIButton) {
+		try! Auth.auth().signOut()
+		self.dismiss(animated: false, completion: nil)
+	}
 
     /*
     // MARK: - Navigation
