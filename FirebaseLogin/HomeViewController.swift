@@ -13,12 +13,34 @@ import FirebaseDatabase
 
 
 class HomeViewController: UIViewController {
+	@IBAction func LogoutAction(_ sender: Any) {
+		do {
+			try Auth.auth().signOut()
+		}
+		catch let signOutError as NSError {
+			print ("Error signing out: %@", signOutError)
+		}
+		
 
-    override func viewDidLoad() {
+		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+		let initial = storyboard.instantiateInitialViewController()
+		UIApplication.shared.keyWindow?.rootViewController = initial
+
+		func viewDidLoad() {
         super.viewDidLoad()
-		self.title = "Home View"
+		// self.title = "Home View"
 
+		func viewWillAppear(_ animated: Bool) {
+			super.viewWillAppear(true)
+			// Show the Navigation Bar
+			self.navigationController?.setNavigationBarHidden(true, animated: true)
+		}
 
+		func viewWillDisappear(_ animated: Bool) {
+			super.viewWillDisappear(true)
+			// Hide the Navigation Bar
+			self.navigationController?.setNavigationBarHidden(false, animated: false)
+		}
 
 		var current = Auth.auth().currentUser
 		var uid = current?.uid
@@ -35,12 +57,17 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
 
 
+
+		}
+
+
     }
     
-	@IBAction func handleLogout(_ target: UIButton) {
+	/*@IBAction func handleLogout(_ target: UIButton) {
 		try! Auth.auth().signOut()
 		self.dismiss(animated: false, completion: nil)
 	}
+	*/
 
     /*
     // MARK: - Navigation
