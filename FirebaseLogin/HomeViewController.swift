@@ -13,24 +13,28 @@ import FirebaseDatabase
 
 
 class HomeViewController: UIViewController {
+	@IBOutlet weak var packerName: UILabel!
 	@IBAction func LogoutAction(_ sender: Any) {
 		do {
 			try Auth.auth().signOut()
+			_ = navigationController?.popToRootViewController(animated: true)
 		}
 		catch let signOutError as NSError {
 			print ("Error signing out: %@", signOutError)
 		}
-		
 
-		let storyboard = UIStoryboard(name: "Main", bundle: nil)
+	}
+
+		/*let storyboard = UIStoryboard(name: "Main", bundle: nil)
 		let initial = storyboard.instantiateInitialViewController()
 		UIApplication.shared.keyWindow?.rootViewController = initial
+	*/
 
-		func viewDidLoad() {
+		override func viewDidLoad() {
         super.viewDidLoad()
 		// self.title = "Home View"
 
-		func viewWillAppear(_ animated: Bool) {
+		/*func viewWillAppear(_ animated: Bool) {
 			super.viewWillAppear(true)
 			// Show the Navigation Bar
 			self.navigationController?.setNavigationBarHidden(true, animated: true)
@@ -41,10 +45,11 @@ class HomeViewController: UIViewController {
 			// Hide the Navigation Bar
 			self.navigationController?.setNavigationBarHidden(false, animated: false)
 		}
-
+*/
+			print("#############")
 		var current = Auth.auth().currentUser
-		var uid = current?.uid
-//		print(current?.uid)
+		let uid = current?.uid
+			//		print(current?.uid)
 
 		let ref = Database.database().reference()
 
@@ -53,30 +58,25 @@ class HomeViewController: UIViewController {
 			let tripInfo = snapshot.value as? [String : AnyObject] ?? [:]
 			print(tripInfo)
 		})
+		{ (error) in
 
-        // Do any additional setup after loading the view.
+			print(error.localizedDescription)
+			}
 
+			let packerNameRef = ref.child("packer").child(uid!)
+			packerNameRef.observe(DataEventType.value, with: { (snapshot) in
+				let packer = snapshot.value as? [String : Any] ?? [:]
+				self.packerName.text = packer["name"] as? String
+				print(packer)
+			})
+
+			
 
 
 		}
 
 
-    }
-    
-	/*@IBAction func handleLogout(_ target: UIButton) {
-		try! Auth.auth().signOut()
-		self.dismiss(animated: false, completion: nil)
-	}
-	*/
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

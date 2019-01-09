@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
 	@IBAction func loginAction(_ sender: UIButton) {
 		Auth.auth().signIn(withEmail: emailOutlet.text!, password: passwordOutlet.text!) { (user, error) in
 			if error == nil{
+				print("login success!!!!!!!")
+
 				self.performSegue(withIdentifier: "SuccessLoginSegue", sender: self)
 			}
 			else{

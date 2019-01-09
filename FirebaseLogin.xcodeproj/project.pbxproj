@@ -17,6 +17,7 @@
 		A16BC80D21E1914C001F76A8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16BC80C21E1914C001F76A8 /* LoginViewController.swift */; };
 		A16BC80F21E1915F001F76A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16BC80E21E1915F001F76A8 /* HomeViewController.swift */; };
 		A16BC81121E1916E001F76A8 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16BC81021E1916E001F76A8 /* SignUpViewController.swift */; };
+		A16D025C21E6B071008C5107 /* TripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16D025B21E6B071008C5107 /* TripViewController.swift */; };
 		EE24EC880A6224698E4EDCE3 /* Pods_FirebaseLogin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B33C6E6106AA580B18FB33B /* Pods_FirebaseLogin.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		A16BC80C21E1914C001F76A8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A16BC80E21E1915F001F76A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		A16BC81021E1916E001F76A8 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A16D025B21E6B071008C5107 /* TripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripViewController.swift; sourceTree = "<group>"; };
 		BEE284158088A277062F9E6F /* Pods-FirebaseLogin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FirebaseLogin.release.xcconfig"; path = "Pods/Target Support Files/Pods-FirebaseLogin/Pods-FirebaseLogin.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 			children = (
 				A106591721E065EC006911B0 /* AppDelegate.swift */,
 				A16BC80921E19100001F76A8 /* StartViewController.swift */,
+				A16D025B21E6B071008C5107 /* TripViewController.swift */,
 				A16BC80C21E1914C001F76A8 /* LoginViewController.swift */,
 				A16BC80E21E1915F001F76A8 /* HomeViewController.swift */,
 				A16BC81021E1916E001F76A8 /* SignUpViewController.swift */,
@@ -234,6 +237,7 @@
 				A16BC80D21E1914C001F76A8 /* LoginViewController.swift in Sources */,
 				A16BC80B21E19100001F76A8 /* StartViewController.swift in Sources */,
 				A106591821E065EC006911B0 /* AppDelegate.swift in Sources */,
+				A16D025C21E6B071008C5107 /* TripViewController.swift in Sources */,
 				A16BC80F21E1915F001F76A8 /* HomeViewController.swift in Sources */,
 				A16BC81121E1916E001F76A8 /* SignUpViewController.swift in Sources */,
 			);
