@@ -92,7 +92,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fY0-TL-D3e">
-                                <rect key="frame" x="98" y="168" width="184" height="30"/>
+                                <rect key="frame" x="97" y="224" width="184" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="api-rl-R1t"/>
                                 </constraints>
@@ -101,7 +101,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" keyboardAppearance="alert" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ePx-f8-OtG">
-                                <rect key="frame" x="98" y="272" width="184" height="30"/>
+                                <rect key="frame" x="97" y="292" width="184" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="ztE-Ln-q2t"/>
                                 </constraints>
@@ -110,7 +110,7 @@
                                 <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="DTm-Mh-AYR">
-                                <rect key="frame" x="97" y="344" width="184" height="30"/>
+                                <rect key="frame" x="97" y="364" width="184" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="184" id="tcX-d3-Ceu"/>
                                 </constraints>
@@ -132,21 +132,39 @@
                                     <action selector="registerAction:" destination="Z1m-Ab-FEu" eventType="touchUpInside" id="Rtv-Eb-nrF"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="profile-icon" translatesAutoresizingMaskIntoConstraints="NO" id="uer-yu-9u7">
+                                <rect key="frame" x="149" y="94" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teC-BP-HpU">
+                                <rect key="frame" x="126" y="182" width="127" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Tap to change">
+                                    <color key="titleColor" red="0.2784313725" green="0.46274509800000002" blue="0.67843137249999996" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v2G-fJ-BB0">
+                                <rect key="frame" x="97" y="262" width="184" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="fY0-TL-D3e" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="98" id="0L2-r4-0JB"/>
-                            <constraint firstItem="ihl-cd-lUH" firstAttribute="top" secondItem="DTm-Mh-AYR" secondAttribute="bottom" constant="62" id="2mB-xo-69i"/>
+                            <constraint firstItem="fY0-TL-D3e" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="97" id="0L2-r4-0JB"/>
+                            <constraint firstItem="ihl-cd-lUH" firstAttribute="top" secondItem="DTm-Mh-AYR" secondAttribute="bottom" constant="42" id="2mB-xo-69i"/>
                             <constraint firstItem="DTm-Mh-AYR" firstAttribute="top" secondItem="ePx-f8-OtG" secondAttribute="bottom" constant="42" id="38V-7E-BWF"/>
                             <constraint firstItem="DTm-Mh-AYR" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="97" id="8TR-5o-WSK"/>
-                            <constraint firstItem="ePx-f8-OtG" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="98" id="Big-3y-dr1"/>
+                            <constraint firstItem="ePx-f8-OtG" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="97" id="Big-3y-dr1"/>
                             <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="DTm-Mh-AYR" secondAttribute="trailing" constant="133" id="Hf3-k8-0Vw"/>
                             <constraint firstItem="ihl-cd-lUH" firstAttribute="leading" secondItem="nW1-08-Er5" secondAttribute="leading" constant="114" id="Lpq-66-1Go"/>
-                            <constraint firstItem="fY0-TL-D3e" firstAttribute="top" secondItem="nW1-08-Er5" secondAttribute="top" constant="104" id="Qxc-qI-Tmo"/>
-                            <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="ePx-f8-OtG" secondAttribute="trailing" constant="132" id="UQe-yo-sc6"/>
+                            <constraint firstItem="fY0-TL-D3e" firstAttribute="top" secondItem="nW1-08-Er5" secondAttribute="top" constant="160" id="Qxc-qI-Tmo"/>
+                            <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="ePx-f8-OtG" secondAttribute="trailing" constant="133" id="UQe-yo-sc6"/>
                             <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="ihl-cd-lUH" secondAttribute="trailing" constant="150" id="WKN-aQ-BK7"/>
-                            <constraint firstItem="ePx-f8-OtG" firstAttribute="top" secondItem="fY0-TL-D3e" secondAttribute="bottom" constant="74" id="X5a-ud-A2X"/>
-                            <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="fY0-TL-D3e" secondAttribute="trailing" constant="132" id="hYC-WY-VoP"/>
+                            <constraint firstItem="ePx-f8-OtG" firstAttribute="top" secondItem="fY0-TL-D3e" secondAttribute="bottom" constant="38" id="X5a-ud-A2X"/>
+                            <constraint firstItem="nW1-08-Er5" firstAttribute="trailing" secondItem="fY0-TL-D3e" secondAttribute="trailing" constant="133" id="hYC-WY-VoP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nW1-08-Er5"/>
                     </view>
@@ -154,11 +172,14 @@
                         <outlet property="confirmPasswordOutlet" destination="DTm-Mh-AYR" id="frI-fj-vMx"/>
                         <outlet property="emailOutlet" destination="fY0-TL-D3e" id="dNn-ro-bMz"/>
                         <outlet property="passwordOutlet" destination="ePx-f8-OtG" id="Whw-sX-zdk"/>
+                        <outlet property="profileImageView" destination="uer-yu-9u7" id="KPI-Ek-YQy"/>
+                        <outlet property="tapToChangeProfileButton" destination="teC-BP-HpU" id="hRh-Jx-Waq"/>
+                        <outlet property="usernameOutlet" destination="v2G-fJ-BB0" id="n9d-Ga-jmG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMT-Fe-CMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="142" y="1391"/>
+            <point key="canvasLocation" x="140.57971014492756" y="1390.7608695652175"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="Wsl-2N-f1h">
@@ -300,5 +321,6 @@
         <image name="Compass_Icon-color-full" width="465" height="464"/>
         <image name="NoBo Multi" width="206" height="127"/>
         <image name="Tagline Script" width="297" height="167"/>
+        <image name="profile-icon" width="61.680000305175781" height="61.680000305175781"/>
     </resources>
 </document>

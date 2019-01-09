@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
 		// ref.childByAutoId().setValue(["name":"Oscar", "email":"o@o.com", "password":"asdfasdf"])
 
     }
-    
+
 
     /*
     // MARK: - Navigation

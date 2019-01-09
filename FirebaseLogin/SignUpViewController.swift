@@ -8,14 +8,18 @@
 
 import UIKit
 import Firebase
-
+import FirebaseDatabase
 
 class SignUpViewController: UIViewController {
 
 	@IBOutlet weak var emailOutlet: UITextField!
 	@IBOutlet weak var passwordOutlet: UITextField!
 	@IBOutlet weak var confirmPasswordOutlet: UITextField!
-
+	@IBOutlet weak var profileImageView: UIImageView!
+	@IBOutlet weak var tapToChangeProfileButton: UIButton!
+	@IBOutlet weak var usernameOutlet: UITextField!
+	
+	var imagePicker:UIImagePickerController!
 
 	override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +37,14 @@ class SignUpViewController: UIViewController {
 			self.present(alertController, animated: true, completion: nil)
 		}
 		else{
+			let ref = Database.database().reference()
+
 			Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlet.text!){ (user, error) in
 				if error == nil {
-
+					let u = Auth.auth().currentUser!
 					// user.uid to set new entry into packer table
+					ref.child("packer").child(u.uid).setValue(["name":self.usernameOutlet.text!])
+					
 
 					let alertController = UIAlertController(title: "Success", message: "You successfully Registered", preferredStyle: .alert)
 
@@ -56,9 +64,23 @@ class SignUpViewController: UIViewController {
 
 					alertController.addAction(defaultAction)
 					self.present(alertController, animated: true, completion: nil)
+					
 				}
 			}
 		}
+
+		/*func saveProfile(username:String, completion: ((_ success:Bool())) {
+			gaurd let uid = Auth.auth().currentUser?.uid else { return }
+			let databaseRef = Database.database().reference().child("users/profile/\(uid)")
+
+			let userObject = [
+			"packer": username
+			] as [String:Any]
+
+			databaseRef.setValue(userObject) { error, ref in
+			completion(error == nil)
+		}*/
+
 	}
 
     /*
