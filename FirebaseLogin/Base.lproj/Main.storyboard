@@ -430,10 +430,58 @@
                     <view key="view" contentMode="scaleToFill" id="p1c-Uz-3iq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pre-hammock" translatesAutoresizingMaskIntoConstraints="NO" id="oxz-Ku-0QJ">
+                                <rect key="frame" x="64" y="199" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="HRq-oh-vPf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="286" id="Yde-F3-yIn"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-hammock" translatesAutoresizingMaskIntoConstraints="NO" id="YiM-qD-lVw">
+                                <rect key="frame" x="64" y="399" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="JsP-zV-70s"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="286" id="eHq-xr-CDC"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pre-sail" translatesAutoresizingMaskIntoConstraints="NO" id="9vC-GD-Kzi">
+                                <rect key="frame" x="74" y="110" width="267" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="267" id="S4b-D0-CY3"/>
+                                    <constraint firstAttribute="width" constant="267" id="zMH-FR-pjd"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-sail" translatesAutoresizingMaskIntoConstraints="NO" id="5el-1t-RNI">
+                                <rect key="frame" x="64" y="299" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="QhZ-Z7-B1C"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="286" id="unq-sp-9Ek"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="89U-jN-nYF" firstAttribute="trailing" secondItem="YiM-qD-lVw" secondAttribute="trailing" constant="64" id="7Hv-gw-SP8"/>
+                            <constraint firstItem="oxz-Ku-0QJ" firstAttribute="top" secondItem="9vC-GD-Kzi" secondAttribute="bottom" constant="23" id="Bty-2t-c6c"/>
+                            <constraint firstItem="9vC-GD-Kzi" firstAttribute="top" secondItem="89U-jN-nYF" secondAttribute="top" constant="46" id="FDe-rB-t87"/>
+                            <constraint firstItem="5el-1t-RNI" firstAttribute="leading" secondItem="89U-jN-nYF" secondAttribute="leading" constant="64" id="JLq-UZ-aJu"/>
+                            <constraint firstItem="5el-1t-RNI" firstAttribute="top" secondItem="oxz-Ku-0QJ" secondAttribute="bottom" constant="16" id="KrJ-bT-nKA"/>
+                            <constraint firstItem="oxz-Ku-0QJ" firstAttribute="top" secondItem="9vC-GD-Kzi" secondAttribute="bottom" constant="23" id="MzN-hl-bNw"/>
+                            <constraint firstItem="YiM-qD-lVw" firstAttribute="leading" secondItem="89U-jN-nYF" secondAttribute="leading" constant="64" id="TpY-6T-XKU"/>
+                            <constraint firstItem="oxz-Ku-0QJ" firstAttribute="leading" secondItem="89U-jN-nYF" secondAttribute="leading" constant="64" id="Vdk-nG-DYS"/>
+                            <constraint firstItem="89U-jN-nYF" firstAttribute="trailing" secondItem="9vC-GD-Kzi" secondAttribute="trailing" constant="73" id="c4M-3S-kkG"/>
+                            <constraint firstItem="9vC-GD-Kzi" firstAttribute="leading" secondItem="89U-jN-nYF" secondAttribute="leading" constant="74" id="cbv-vc-N3a"/>
+                            <constraint firstItem="YiM-qD-lVw" firstAttribute="top" secondItem="5el-1t-RNI" secondAttribute="bottom" constant="16" id="eiT-rW-l2Z"/>
+                            <constraint firstItem="89U-jN-nYF" firstAttribute="trailing" secondItem="5el-1t-RNI" secondAttribute="trailing" constant="64" id="fT5-TP-1gX"/>
+                            <constraint firstItem="89U-jN-nYF" firstAttribute="trailing" secondItem="oxz-Ku-0QJ" secondAttribute="trailing" constant="64" id="frh-P5-3hu"/>
+                            <constraint firstItem="YiM-qD-lVw" firstAttribute="top" secondItem="5el-1t-RNI" secondAttribute="bottom" constant="16" id="hfV-Nv-x8w"/>
+                            <constraint firstItem="5el-1t-RNI" firstAttribute="leading" secondItem="oxz-Ku-0QJ" secondAttribute="leading" id="kX2-Ny-2jY"/>
+                            <constraint firstItem="5el-1t-RNI" firstAttribute="top" secondItem="oxz-Ku-0QJ" secondAttribute="bottom" constant="16" id="y1b-b1-u8G"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="89U-jN-nYF"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Ibt-Mj-lkU" userLabel="Previous Trips"/>
+                    <tabBarItem key="tabBarItem" title="Previous Trips" image="3dots" id="Ibt-Mj-lkU" userLabel="Previous Trips"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pOh-Rr-qMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -446,19 +494,58 @@
                     <view key="view" contentMode="scaleToFill" id="tEP-Xt-MSu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pre-sail" translatesAutoresizingMaskIntoConstraints="NO" id="Gdm-mk-amP">
+                                <rect key="frame" x="74" y="94" width="267" height="66"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="267" id="3HH-2k-Oq4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pre-hammock" translatesAutoresizingMaskIntoConstraints="NO" id="BE7-mm-LLM">
+                                <rect key="frame" x="64" y="183" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="sNn-AQ-9T3"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-hammock" translatesAutoresizingMaskIntoConstraints="NO" id="6Ey-2E-mtY">
+                                <rect key="frame" x="64" y="383" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="pYY-Wb-aaN"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="up-sail" translatesAutoresizingMaskIntoConstraints="NO" id="dua-vy-ng1">
+                                <rect key="frame" x="64" y="283" width="286" height="84"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="286" id="w9S-oH-hoO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="VV4-0i-fT2" firstAttribute="trailing" secondItem="6Ey-2E-mtY" secondAttribute="trailing" constant="64" id="0va-do-qms"/>
+                            <constraint firstItem="BE7-mm-LLM" firstAttribute="leading" secondItem="VV4-0i-fT2" secondAttribute="leading" constant="64" id="3vL-gh-Bc5"/>
+                            <constraint firstItem="BE7-mm-LLM" firstAttribute="top" secondItem="Gdm-mk-amP" secondAttribute="bottom" constant="23" id="8Om-TR-ChT"/>
+                            <constraint firstItem="dua-vy-ng1" firstAttribute="top" secondItem="BE7-mm-LLM" secondAttribute="bottom" constant="16" id="APE-f8-fIl"/>
+                            <constraint firstItem="VV4-0i-fT2" firstAttribute="trailing" secondItem="Gdm-mk-amP" secondAttribute="trailing" constant="73" id="Inm-1f-iVE"/>
+                            <constraint firstItem="dua-vy-ng1" firstAttribute="leading" secondItem="BE7-mm-LLM" secondAttribute="leading" id="MVW-oJ-j7Z"/>
+                            <constraint firstItem="Gdm-mk-amP" firstAttribute="leading" secondItem="VV4-0i-fT2" secondAttribute="leading" constant="74" id="MyS-fB-TJY"/>
+                            <constraint firstItem="6Ey-2E-mtY" firstAttribute="top" secondItem="dua-vy-ng1" secondAttribute="bottom" constant="16" id="UNz-Jk-5um"/>
+                            <constraint firstItem="VV4-0i-fT2" firstAttribute="trailing" secondItem="BE7-mm-LLM" secondAttribute="trailing" constant="64" id="iLw-kM-l5H"/>
+                            <constraint firstItem="6Ey-2E-mtY" firstAttribute="leading" secondItem="VV4-0i-fT2" secondAttribute="leading" constant="64" id="iwp-bY-Li5"/>
+                            <constraint firstItem="Gdm-mk-amP" firstAttribute="top" secondItem="VV4-0i-fT2" secondAttribute="top" constant="30" id="ujg-3M-EOU"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VV4-0i-fT2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="jLY-FJ-uYd" userLabel="Upcoming Trips"/>
+                    <tabBarItem key="tabBarItem" title="Upcoming Trips" image="3dots" id="jLY-FJ-uYd" userLabel="Upcoming Trips"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y2O-Ud-bDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3000" y="1272"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--AllTripsTabController-->
         <scene sceneID="FHP-UE-XeO">
             <objects>
-                <tabBarController id="v1u-oC-0VX" sceneMemberID="viewController">
+                <tabBarController title="AllTripsTabController" id="v1u-oC-0VX" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2KR-Gw-qgG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -772,6 +859,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="3dots" width="29" height="11"/>
         <image name="Compass_Icon-color-full" width="465" height="464"/>
         <image name="NoBo Multi" width="206" height="127"/>
         <image name="ProfilePic" width="129" height="129"/>
