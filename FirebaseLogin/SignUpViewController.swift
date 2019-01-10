@@ -42,6 +42,7 @@ class SignUpViewController: UIViewController {
 			Auth.auth().createUser(withEmail: emailOutlet.text!, password: passwordOutlet.text!){ (user, error) in
 				if error == nil {
 					let u = Auth.auth().currentUser!
+
 					// user.uid to set new entry into packer table
 					ref.child("packer").child(u.uid).setValue(["name":self.usernameOutlet.text!])
 					
@@ -69,28 +70,10 @@ class SignUpViewController: UIViewController {
 			}
 		}
 
-		/*func saveProfile(username:String, completion: ((_ success:Bool())) {
-			gaurd let uid = Auth.auth().currentUser?.uid else { return }
-			let databaseRef = Database.database().reference().child("users/profile/\(uid)")
 
-			let userObject = [
-			"packer": username
-			] as [String:Any]
-
-			databaseRef.setValue(userObject) { error, ref in
-			completion(error == nil)
-		}*/
 
 	}
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
